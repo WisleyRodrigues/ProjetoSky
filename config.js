@@ -6,9 +6,7 @@ const config = {};
 
 config.env = process.env.NODE_ENV || 'development';
 config.appName = process.env.APP_NAME || 'app';
-// config.awsKey = process.env.AWS_ACCESS_KEY_ID;
-// config.awsSecret = process.env.AWS_SECRET_ACCESS_KEY;
-// config.awsRegion = process.env.AWS_REGION || 'sa-east-1';
+config.port = process.env.PORT || 3000;
 
 config.mongoUri = process.env.MONGO_URI || 'mongodb://localhost/sky';
 

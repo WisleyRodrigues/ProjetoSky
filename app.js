@@ -6,13 +6,11 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const bearerToken = require('express-bearer-token');
  
-
 require('dotenv').config();
 
+const {port} = require('./config')
 const errorHandler = require('./handlers/error');
 const notFoundHandler = require('./handlers/notFound');
-
-
 
 const app = express();
 
@@ -33,6 +31,6 @@ app.use('/', indexRoute);
 app.use(notFoundHandler);
 app.use(errorHandler);
 
-app.listen(3000, () => {
-  debug('Servidor inciado na porta 3000!');
+app.listen(port, () => {
+  debug(`Servidor inciado na porta ${port}!`);
 });
